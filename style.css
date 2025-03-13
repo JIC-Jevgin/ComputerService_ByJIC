@@ -1,0 +1,253 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    background: linear-gradient(135deg, #2e3b4e, #1e2a37); /* Темный градиент */
+    color: #fff;
+}
+
+/* Убираем маркеры у списка */
+ul, ol {
+    list-style: none; /* Убирает точки или номера */
+    padding: 0; /* Убирает отступы */
+    margin: 0; /* Убирает внешние отступы */
+}
+
+textarea {
+    width: 100%;              /* Ширина 100% от родительского контейнера */
+    height: 150px;            /* Фиксированная высота */
+    resize: none;             /* Запрещает изменение размера поля */
+    padding: 10px;            /* Отступы внутри поля */
+    font-size: 1em;           /* Размер шрифта */
+    border: 1px solid #ddd;  /* Цвет границы */
+    border-radius: 5px;       /* Радиус скругления углов */
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    border-color: #4e5d6c;    /* Цвет границы при фокусе */
+    outline: none;            /* Убирает стандартное обводку */
+}
+
+
+/* Контейнер для контента */
+.container {
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Прозрачный фон */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Тень */
+    border-radius: 15px;
+    backdrop-filter: blur(10px); /* Мутный эффект */
+}
+
+/* Заголовки */
+h1, h2 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень для текста */
+}
+
+/* Формы */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #444;
+    border-radius: 10px;
+    background: #2e3b4e;
+    color: #fff;
+    font-size: 16px;
+    box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.2); /* Внутренняя тень */
+}
+
+/* Ссылки в виде кнопок */
+a {
+    display: inline-block; /* Чтобы они вели себя как элементы с размерами */
+    padding: 10px 25px; /* Отступы, чтобы сделать ссылку похожей на кнопку */
+    margin: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff; /* Белый текст */
+    text-decoration: none; /* Убираем стандартное подчеркивание */
+    border-radius: 30px; /* Округлые края */
+    background: linear-gradient(135deg, #6a7b8c, #4e5d6c); /* Градиентный фон */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Тень */
+    transition: all 0.3s ease-in-out; /* Плавные переходы */
+    position: relative; /* Для создания псевдоэлементов */
+}
+
+/* Подчеркивание при наведении */
+a:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Появляется ниже */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* Дополнительный эффект при наведении (светящийся текст) */
+a:hover {
+    text-shadow: 0 0 8px rgba(255, 111, 97, 0.7), 0 0 15px rgba(255, 111, 97, 0.5); /* Светящийся текст */
+}
+
+/* Ссылки в виде кнопок */
+a {
+    display: inline-block; /* Чтобы они вели себя как элементы с размерами */
+    padding: 10px 25px; /* Отступы, чтобы сделать ссылку похожей на кнопку */
+    margin: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #4e5d6c; /* Цвет ссылки */
+    text-decoration: none; /* Убираем стандартное подчеркивание */
+    border-radius: 30px; /* Округлые края */
+    background: linear-gradient(135deg, #6a7b8c, #4e5d6c); /* Градиентный фон */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Тень */
+    position: relative; /* Для создания псевдоэлементов */
+    transition: color 0.3s ease, transform 0.3s ease; /* Плавный переход */
+}
+
+/* Эффект неона при наведении */
+a:hover {
+    color: #ffffff; /* Цвет текста при наведении */
+    text-shadow: 0 0 5px rgba(255, 111, 97, 0.7), 0 0 10px rgba(255, 111, 97, 0.5), 0 0 15px rgba(255, 111, 97, 0.3); /* Неоновое свечение */
+}
+
+/* Плавное подчеркивание при наведении */
+a:hover::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ff6f61; /* Цвет линии */
+    transform: scaleX(0); /* Линия скрыта */
+    transition: transform 0.3s ease; /* Плавное появление */
+}
+
+/* Контейнер для страницы заказа */
+.order-container {
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Заголовок и описание */
+.order-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.order-header h1 {
+    font-size: 2.5em;
+    color: #ffffff;
+}
+
+.order-header p {
+    font-size: 1.2em;
+    color: #d3d3d3;
+}
+
+/* Формы */
+.order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Стили для групп ввода */
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 1.1em;
+    color: #c4c4c4;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #4e5d6c;
+    outline: none;
+}
+
+/* Кнопка отправки */
+.submit-btn {
+    padding: 15px;
+    font-size: 1.2em;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #ff5b3a;
+    transform: translateY(-5px);
+}
+
+.submit-btn:active {
+    transform: translateY(2px);
+}
+
+/* Респонсивность */
+@media (max-width: 768px) {
+    .order-container {
+        padding: 15px;
+    }
+
+    .order-header h1 {
+        font-size: 2em;
+    }
+
+    .order-header p {
+        font-size: 1em;
+    }
+
+    .submit-btn {
+        font-size: 1em;
+    }
+}
+
+/* Подвал */
+footer {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #ccc;
+}
