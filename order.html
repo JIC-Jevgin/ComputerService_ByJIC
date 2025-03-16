@@ -16,15 +16,41 @@
         </div>
 
         <!-- Форма с отправкой через FormSubmit -->
-        <form action="https://formsubmit.co/stemanir@gmail.com" method="POST">
-    <input type="hidden" name="_next" value="https://jic-jevgin.github.io/ComputerService_ByJIC/thanks.html">
-    <input type="text" name="name" placeholder="Ваше имя" required>
-    <input type="phone" name="phone" placeholder="Ваш номер" required>
-    <input type="email" name="email" placeholder="Ваш email" required>
-    <textarea name="message" placeholder="Ваше сообщение" required></textarea>
-    <button type="submit">Отправить</button>
-</form>
+        <form action="https://formsubmit.co/stemanir@gmail.com" method="POST" class="order-form">
+            <!-- Поле для имени -->
+            <div class="input-group">
+                <label for="name">Ваше имя</label>
+                <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+            </div>
 
+            <!-- Поле для email -->
+            <div class="input-group">
+                <label for="email">Электронная почта</label>
+                <input type="email" id="email" name="email" placeholder="Введите ваш email" required>
+            </div>
+
+            <!-- Поле для телефона -->
+            <div class="input-group">
+                <label for="phone">Телефон</label>
+                <input type="tel" id="phone" name="phone" placeholder="Введите ваш телефон" required>
+            </div>
+
+            <!-- Поле для адреса -->
+            <div class="input-group">
+                <label for="address">Адрес доставки</label>
+                <input type="text" id="address" name="address" placeholder="Введите ваш адрес" required>
+            </div>
+
+            <!-- Поле для сообщения -->
+            <div class="input-group">
+                <label for="message">Сообщение</label>
+                <textarea id="message" name="message" placeholder="Введите ваше сообщение" required></textarea>
+
+            <!-- Кнопка отправки -->
+            <button type="submit" class="submit-btn">Оформить заказ</button>
+
+            <input type="hidden" name="_next" value="https:///jic-jevgin.github.io/ComputerService_ByJIC/thanks.html">
+        </form>
     </section>
 
 </body>

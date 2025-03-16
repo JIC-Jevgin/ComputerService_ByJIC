@@ -9,6 +9,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <p>Это предупреждение! Нажмите ОК для продолжения.</p>
+            <button class="btn-ok" id="closeBtn">ОК</button>
+        </div>
+    </div>
 
     <header>
         <div class="header-content">
@@ -46,9 +52,43 @@
         </div>
     </section>
 
+    <button class="open-modal-btn" id="openModalBtn">Предупреждение</button>
+
     <footer>
         <p>© 2025 Ремонт ПК. Все права защищены. (нет)</p>
     </footer>
+
+    <script>
+        const modal = document.getElementById('myModal');
+        const closeBtn = document.getElementById('closeBtn');
+        const openModalBtn = document.getElementById('openModalBtn');
+
+        // Проверяем, было ли предупреждение уже показано
+        if (!localStorage.getItem('warningDismissed')) {
+            setTimeout(function() {
+                document.getElementById('myModal').classList.add('show');
+            }, 1000);
+        }
+
+        // Закрываем модальное окно и сохраняем статус в localStorage
+        document.getElementById('closeBtn').onclick = function() {
+            let modal = document.getElementById('myModal');
+            modal.classList.remove('show');
+
+            // Сохраняем, что пользователь закрыл предупреждение
+            localStorage.setItem('warningDismissed', 'true');
+
+            setTimeout(() => {
+                modal.style.visibility = 'hidden';
+            }, 500);
+        };
+
+         // Повторное открытие окна по кнопке
+         openModalBtn.onclick = function() {
+            modal.style.visibility = 'visible';
+            modal.classList.add('show');
+        };
+    </script>
 
 </body>
 </html>
