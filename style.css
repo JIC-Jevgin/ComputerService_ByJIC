@@ -29,7 +29,6 @@ body {
     backdrop-filter: blur(5px);
     justify-content: center;
     align-items: center;
-    opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
     z-index: 1000; /* 🔥 Поверх всех элементов */
