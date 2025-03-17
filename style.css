@@ -54,16 +54,14 @@ body {
     }
 }
 
-.modal-content {
-    background: #fff;
-    padding: 25px;
-    border-radius: 12px;
-    text-align: center;
-    width: 320px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
-    transform: scale(0.8);
-    transition: transform 0.3s ease-in-out;
-    opacity: 0;
+.modal-content p {
+    font-size: 16px;
+    color: #333;
+    text-align: left; /* Выравнивание текста влево */
+    line-height: 1.6; /* Увеличенный межстрочный интервал */
+    word-wrap: break-word; /* Перенос длинных слов */
+    max-width: 90%; /* Чтобы текст не растягивался на всю ширину */
+    margin: 0 auto; /* Центрирование блока с текстом */
 }
 
 .modal.show .modal-content {
