@@ -43,11 +43,9 @@ body {
 }
 
 /* Содержимое окна */
-
-
 .modal-content p {
-    font-size: 16px;
-    color: #333;
+    text-align: center;
+    text-color: #5779ad;
 }
 
 /* Кнопка ОК */
