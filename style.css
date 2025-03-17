@@ -36,10 +36,11 @@ body {
     pointer-events: none; /* Блокируем клики, когда скрыто */
 }
 
-.modal.show {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: all; /* Включаем клики, когда показано */
+.modal-content {
+    background: #fff; /* Белый фон */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* Содержимое окна */
