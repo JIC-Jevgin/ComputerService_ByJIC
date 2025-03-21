@@ -1,0 +1,121 @@
+/* Общие стили */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Ссылка "Главная" */
+a {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Segoe Script", sans-serif;
+    border-radius: 46px;
+    background: linear-gradient(45deg, #763030, #c62f2f);
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #0ff;
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+}
+
+a:hover {
+    background: #540d0d;
+}
+
+/* Контейнер заказа */
+.order-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+}
+
+/* Заголовок */
+.order-header h1 {
+    font-size: 28px;
+    color: #ffcc00;
+    text-shadow: 0 0 10px #ffcc00;
+}
+
+.order-header p {
+    font-size: 16px;
+    color: #aaa;
+}
+
+/* Поля формы */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ffcc00;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #ff0000;
+}
+
+/* Кнопка отправки */
+.submit-btn {
+    display: inline-block;
+    background: linear-gradient(45deg, #ff0000, #c62f2f);
+    color: #0ff;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+}
+
+.submit-btn:hover {
+    background: #e67e22;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .order-container {
+        width: 90%;
+    }
+
+    .order-header h1 {
+        font-size: 24px;
+    }
+
+    input,
+    textarea {
+        font-size: 14px;
+    }
+
+    .submit-btn {
+        font-size: 16px;
+        padding: 10px 18px;
+    }
+}
