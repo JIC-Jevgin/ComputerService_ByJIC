@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: "Segoe UI", sans-serif;
+    font-family: Arial, sans-serif;
     background: black;
     color: white;
     text-align: center;
@@ -18,28 +18,27 @@ a {
     display: inline-block;
     font-size: 18px;
     font-weight: bold;
-    border-radius: 12px;
-    background: linear-gradient(45deg, #ff0000, #800000);
+    font-family: "Segoe Script", sans-serif;
+    border-radius: 46px;
+    background: linear-gradient(45deg, #763030, #c62f2f);
     padding: 12px 20px;
     text-decoration: none;
-    color: cyan;
-    text-shadow: 0 0 5px cyan, 0 0 10px cyan;
-    transition: 0.3s;
+    color: #0ff;
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
 }
 
 a:hover {
-    background: #600000;
+    background: #540d0d;
 }
 
-/* Контейнер формы */
+/* Контейнер заказа */
 .order-container {
-    max-width: 500px;
+    max-width: 600px;
     margin: 20px auto;
-    background: rgba(20, 20, 20, 0.9);
+    background: rgba(0, 0, 0, 0.8);
     padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
-    border: 2px solid rgba(255, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
 }
 
 /* Заголовок */
@@ -51,7 +50,7 @@ a:hover {
 
 .order-header p {
     font-size: 16px;
-    color: #bbb;
+    color: #aaa;
 }
 
 /* Поля формы */
@@ -63,45 +62,41 @@ a:hover {
 label {
     display: block;
     font-size: 16px;
-    color: white;
     margin-bottom: 5px;
 }
 
 input,
 textarea {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     font-size: 16px;
     border: 2px solid #ffcc00;
     border-radius: 8px;
-    background: rgba(30, 30, 30, 0.9);
+    background: rgba(0, 0, 0, 0.7);
     color: white;
     outline: none;
-    transition: 0.3s;
 }
 
 input:focus,
 textarea:focus {
     border-color: #ff0000;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
 }
 
 /* Кнопка отправки */
 .submit-btn {
-    width: 100%;
+    display: inline-block;
     background: linear-gradient(45deg, #ff0000, #c62f2f);
-    color: cyan;
+    color: #0ff;
     font-size: 18px;
-    padding: 12px;
+    padding: 12px 20px;
     border: none;
-    border-radius: 12px;
+    border-radius: 10px;
     cursor: pointer;
-    text-shadow: 0 0 5px cyan, 0 0 10px cyan;
-    transition: 0.3s;
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
 }
 
 .submit-btn:hover {
-    background: #800000;
+    background: #e67e22;
 }
 
 /* Адаптация для мобильных */
@@ -121,6 +116,6 @@ textarea:focus {
 
     .submit-btn {
         font-size: 16px;
-        padding: 10px;
+        padding: 10px 18px;
     }
 }
