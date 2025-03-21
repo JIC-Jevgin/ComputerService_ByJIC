@@ -5,19 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ремонт ПК - Быстро и Надежно</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <video autoplay muted loop id="background-video">
+        <source src="video/bgin.mp4" type="video/mp4">
+        Ваш браузер не поддерживает видео.
+    </video>
+
     <div id="myModal" class="modal">
         <div class="modal-content">
-            <p>
-    Здравствуйте, это окно предупреждает вас о том, что если вы и вправду хотите хороший ремонт, 
-    то лучше обратиться в официальный сервис. Они знают, что делают.
-    <br><br> 
-    Я создал этот сайт, чтобы помочь людям в мелочах с компьютером, 
-    которые в нем ничего не знают. Надеюсь на понимание от вас, заказчика.
-            </p>
+            Этот сайт был создан для помощи в мелких вопросах по ремонту ПК и ноутбуков. 
+    <br><br>
+    Я не гарантирую супернадежность работы, а в сложных случаях 
+    <br>
+    настоятельно рекомендую обращаться в официальные сервисные центры производителей. 
+    <br><br>
+    Надеюсь на ваше понимание. 
             <button class="btn-ok" id="closeBtn">ОК</button>
         </div>
     </div>
@@ -25,7 +28,7 @@
     <header>
         <div class="header-content">
             <h1>Ремонт ПК и ноутбуков</h1>
-            <p>Быстро, Любительски</p>
+            <p>Быстро и Любительски</p>
             <a href="order.html" class="btn">Заказать ремонт</a>
         </div>
     </header>
@@ -38,66 +41,22 @@
     </nav>
 
     <section class="about">
-        <h2>Почему Я?</h2>
+        <h2>Почему я?</h2>
         <div class="features">
-            <div class="feature">
-                <h3>🚀 Быстро+-</h3>
-                <p>Диагностика за 30 минут, ремонт возможно в тот же день.</p>
-            </div>
-            <div class="feature">
-                <h3>🔧 "Любитель"</h3>
-                <p>Опыт работы 2-3 лет.</p>
-            </div>
-            <div class="feature">
-                <h3>💰 Доступно</h3>
-                <p>Честные цены без скрытых платежей.</p>
-            </div>
-            <div class="feature">
-                <h3>📋 Доп. описание</h3>
-                <p>Роботаю в пределах Kolín и в Uhlířské Janovice<br>
-                 А также в будние дни работаю с 3 до 8<br>
-                 на выходных люблю поспать но просыпаюсь примерно к 11
-                 </p>
+            <div class="feature"><h3>🚀 Быстро</h3><p>Диагностика за 30 минут.</p></div>
+            <div class="feature"><h3>🔧 Опыт</h3><p>Работаю 2-3 года.</p></div>
+            <div class="feature"><h3>💰 Доступно</h3><p>Честные цены без скрытых платежей.</p></div>
+            <div class="feature"><h3>📍 Локация</h3><p>Kolín и Uhlířské Janovice.</p></div>
         </div>
     </section>
 
-    <button class="open-modal-btn" id="openModalBtn">Предупреждение</button>
+    <button class="open-modal-btn" id="openModalBtn">⚠️ Предупреждение</button>
 
     <footer>
         <p>© 2025 Ремонт ПК. Все права защищены. (нет)</p>
     </footer>
 
-    <script>
-        const modal = document.getElementById('myModal');
-        const closeBtn = document.getElementById('closeBtn');
-        const openModalBtn = document.getElementById('openModalBtn');
-
-        // Проверяем, было ли предупреждение уже показано
-        if (!localStorage.getItem('warningDismissed')) {
-            setTimeout(function() {
-                document.getElementById('myModal').classList.add('show');
-            }, 1000);
-        }
-
-        // Закрываем модальное окно и сохраняем статус в localStorage
-        document.getElementById('closeBtn').onclick = function() {
-            let modal = document.getElementById('myModal');
-            modal.classList.remove('show');
-
-            // Сохраняем, что пользователь закрыл предупреждение
-            localStorage.setItem('warningDismissed', 'true');
-
-            setTimeout(() => {
-                modal.style.visibility = 'hidden';
-            }, 500);
-        };
-
-         // Повторное открытие окна по кнопке
-         openModalBtn.onclick = function() {
-            modal.style.visibility = 'visible';
-            modal.classList.add('show');
-        };
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
+
